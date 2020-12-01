@@ -3,15 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Olympics Traveler</title>  
-    <link rel="stylesheet" type="text/css" href="theme.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/theme.css">
     <script src="http://maps.google.com/maps/api/js?key=AIzaSyAX6pUQMV4uWw7isouqkNfVs7xqrglMjoY&callback=initMap" type="text/javascript"></script>
-    <script src="gmaps.js"></script>
+    <script src="assets/js/gmaps.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   </head>
   <body class='bg-dark'>
+
+  <!--Navbar verticale-->
     <div id="side-navbar" class="float-lg-left">
       <nav class="bg-light text-center" style="min-height: 100%; position: fixed;">
-        <a class="navbar-brand mx-auto" href="#"><?php include 'logoJO2024.php'?></a>
+        <a class="navbar-brand mx-auto" href="#"><?php include 'assets/svg/logoJO2024.php'?></a>
         <div id="navbar">
           <ul class="nav flex-column">
             <li class="nav-item active">
@@ -30,12 +32,16 @@
         </div>
       </nav>
     </div> 
+    
     <div class='container text-center'>
-      <div id='logo' class=""> 
-        <?php include 'olympicRings.php'?>
+      <!--Header-->
+      <div id='logo' class=" container-xl" style="background-image: url('assets/img/banniere.jpg')"> 
+        <?php include 'assets/svg/olympicRings.php'?>
         <h1 class="text-light">Olympics Traveler</h1>
       </div>
-      <div id="map" class=""><script src="carteJO.js"></script></div>  
+
+      <!--Carte gmaps -->
+      <div id="map" class=""><script src="assets/js/carteJO.js"></script></div>  
       <ul class="nav justify-content-center">
         <li class="nav-item">
           <div class="dropdown">
@@ -60,6 +66,8 @@
       </ul>
     </div>
     <div class='container'>
+
+      <!--Présentation du site-->
       <section id="fiche-site" class="mt-5">
         <div class="bg-secondary h-50 container">
           <h2 class="bg-light text-center">Présentation du site</h2>
@@ -102,17 +110,26 @@
           </div>
         </div>
       </section>
-      <section id="actualites">
+
+      <!--Resultats derniere épreuve / Actu ?-->
+      <section id="Resultats de la dernière épreuve">
         <div class="bg-secondary container">
-          <h2 class="bg-light text-center">Actualités</h2>
+          <h2 class="bg-light text-center">Résultats de la dernière épreuve</h2>
           <div class="row">
             <div class="col-sm">
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse ipsa corporis suscipit reprehenderit, quaerat ratione architecto sit asperiores ullam dolore expedita culpa minus quasi ipsam officiis? Ab eos in nisi?</p>
+              <ol>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ol>
             </div>
           </div>
         </div>
       </section>
     </div>
+
+    <!--Footer-->
     <footer class="container-xl bg-light">
       <div>
         <p id="mentions-leg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, aut culpa? Debitis, quod? Magni tempore voluptate repellendus facere eum sint sunt optio animi natus obcaecati quibusdam quaerat, ipsam corrupti a.</p>
@@ -131,5 +148,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
