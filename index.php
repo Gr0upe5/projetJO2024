@@ -11,7 +11,7 @@
   <body class='bg-dark'>
 
   <!--Navbar verticale-->
-    <div id="side-navbar" class="float-lg-left">
+    <div id="side-navbar" class="float-lg-left" style="z-index:10">
       <nav class="bg-light text-center" style="min-height: 100%; position: fixed;">
         <a class="navbar-brand mx-auto" href="#"><?php include 'assets/svg/logoJO2024.php'?></a>
         <div id="navbar">
@@ -32,16 +32,16 @@
         </div>
       </nav>
     </div> 
-    
+     
+    <!--Header-->
     <div class='container text-center'>
-      <!--Header-->
       <div id='logo' class=" container-xl" style="background-image: url('assets/img/banniere.jpg')"> 
         <?php include 'assets/svg/olympicRings.php'?>
         <h1 class="text-light">Olympics Traveler</h1>
       </div>
 
       <!--Carte gmaps -->
-      <div id="map" class=""><script src="assets/js/carteJO.js"></script></div>  
+      <div id="map" class=""></div>
       <ul class="nav justify-content-center">
         <li class="nav-item">
           <div class="dropdown">
@@ -68,7 +68,7 @@
     <div class='container'>
 
       <!--Présentation du site-->
-      <section id="fiche-site" class="mt-5">
+      <section id="fiche-site" class="mt-5" style="display:none">
         <div class="bg-secondary h-50 container">
           <h2 class="bg-light text-center">Présentation du site</h2>
           <div class="row">
@@ -149,5 +149,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/carteJO.js"></script>
   </body>
 </html>
