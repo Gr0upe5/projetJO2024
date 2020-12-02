@@ -1,8 +1,39 @@
+
 #map {
-    width: 600px;
+    width: 500px;
     height: 400px;
-    margin: auto;
+    
     border: 2px solid black; 
-    padding-top: -150px;   
+    
+    position: relative;
+    animation-duration: 0.5s;
+   
 }
 
+#side-navbar {
+    min-height: 800%; 
+    left: -190px; 
+    transition-duration: 0.5s;
+    position: fixed;
+    z-index: 10;
+    overflow-y: auto;
+}
+
+#side-navbar:hover {
+    left: 0px;
+    
+}
+
+#map-options {
+     position: relative;
+     bottom: -500px;
+}
+ 
+.hidden {
+    display:none
+}
+
+#fiche-site {
+    position: relative;
+    animation-direction: 0.5s;
+}
