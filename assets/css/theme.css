@@ -1,18 +1,15 @@
-
 #map {
-    width: 500px;
+    width: 800px;
     height: 400px;
-    
-    border: 2px solid black; 
-    
+    border: 3px solid black;
+    border-radius: 10px;
     position: relative;
     animation-duration: 0.5s;
-   
 }
 
 #side-navbar {
-    min-height: 800%; 
-    left: -190px; 
+    min-height: 800%;
+    left: -190px;
     transition-duration: 0.5s;
     position: fixed;
     z-index: 10;
@@ -21,19 +18,29 @@
 
 #side-navbar:hover {
     left: 0px;
-    
 }
 
 #map-options {
-     position: relative;
-     bottom: -500px;
-}
- 
-.hidden {
-    display:none
+    position: relative;
+    bottom: -500px;
 }
 
 #fiche-site {
     position: relative;
-    animation-direction: 0.5s;
+    max-width: 820px;
+}
+
+#quit-button {
+    height: 40px;
+    width: 40px;
+    border: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.site-button {
+    height: 40px;
+    border: none;
 }

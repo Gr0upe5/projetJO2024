@@ -1,7 +1,8 @@
-$(document).ready(function () {
-    $("#quit-fiche-site").click(function(){
+$(document).ready(function() {
+    $("#quit-button").click(function() {
         $("#fiche-site").addClass("hidden");
-      });
-    
-});
+        map.setCenter(mapCenter)
+        map.setZoom(10);
+    });
 
+});
