@@ -1,8 +1,7 @@
 #map {
-    width: 800px;
+    width: 700px;
     height: 400px;
-    border: 3px solid black;
-    border-radius: 10px;
+    margin-top: 2px;
     position: relative;
     animation-duration: 0.5s;
 }
@@ -30,10 +29,38 @@
     max-width: 820px;
 }
 
+#site-title {
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    padding: 0 10px 0 10px;
+    margin-bottom: 15px;
+}
+
 #quit-button {
     height: 40px;
     width: 40px;
     border: none;
+}
+
+.select-menu {
+    height: 200px;
+}
+
+.nav-map {
+    position: relative;
+    max-width: 600px;
+}
+
+.inner-site {
+    background-color: #FCD066;
+    color: #003B55;
+    position: relative;
+}
+
+.bg-jo {
+    background: #003B55;
 }
 
 .hidden {
@@ -43,4 +70,12 @@
 .site-button {
     height: 40px;
     border: none;
+}
+
+.menu-list {
+    border: 5px solid black;
+}
+
+.social-icon:hover {
+    outline-color: white;
 }
