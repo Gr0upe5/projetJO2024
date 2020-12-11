@@ -3,7 +3,8 @@
     height: 400px;
     position: relative;
     animation-duration: 0.5s;
-    border-bottom: 10px groove white;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 #side-navbar {
@@ -46,11 +47,13 @@
 
 #results {
     background-color: white;
-    margin-right: 50px;
-    height: 350px;
-    overflow-y: auto;
+    height: 400px;
     width: 200px;
-    border-radius: 20px;
+    overflow-y: auto;
+    display: block;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    float: right;
 }
 
 .results-item {
@@ -64,10 +67,7 @@
 }
 
 .menu-filters td {
-    min-width: 150px;
-    background-color: #FCD066;
     color: #003B55;
-    padding: 1%;
 }
 
 .select-menu {
@@ -104,4 +104,10 @@
 
 .social-icon:hover {
     outline-color: white;
+}
+
+#city-filter {
+    background-color: white;
+    border-radius: 10px;
+    padding: 0px 10px 0px 10px;
 }

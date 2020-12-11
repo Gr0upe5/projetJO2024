@@ -1,8 +1,8 @@
 var filtredMarkers = [];
 
 function handleNoResults() {
-    var noResults = filtredMarkers.length == 0;
     $('#nb-markers').empty().append("0");
+    map.setZoom(11);
 }
 
 function refreshMap() {
@@ -15,6 +15,7 @@ function refreshMap() {
     }
     if (filtredMarkers.length == 0) {
         $('#nb-markers').empty().append("0");
+        map.setZoom(map.getZoom() - 0.1);
     } else {
         map.setCenter(filtredMarkers[0].position);
         map.setZoom(11);
@@ -23,7 +24,7 @@ function refreshMap() {
 }
 
 function initMarkers() {
-    $("#city-filter").empty();
+    $("#city-filter").addClass("hidden").empty();
     for (let i = 0; i < markers.length; i++) {
         markers[i].visible = true;
     }
@@ -52,7 +53,7 @@ function sortVilles(arg) {
     }
     refreshMap();
     showFiltredM();
-    $("#city-filter").empty().append(villes[arg]);
+    $("#city-filter").removeClass("hidden").empty().append(villes[arg]);
 }
 
 function showFiltredM() {
