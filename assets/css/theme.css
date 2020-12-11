@@ -1,9 +1,9 @@
 #map {
-    width: 700px;
+    width: 800px;
     height: 400px;
-    margin-top: 2px;
     position: relative;
     animation-duration: 0.5s;
+    border-bottom: 10px groove white;
 }
 
 #side-navbar {
@@ -42,6 +42,32 @@
     height: 40px;
     width: 40px;
     border: none;
+}
+
+#results {
+    background-color: white;
+    margin-right: 50px;
+    height: 350px;
+    overflow-y: auto;
+    width: 200px;
+    border-radius: 20px;
+}
+
+.results-item {
+    list-style: none;
+    padding: 5px 10px 5px 10px;
+}
+
+.results-item:hover {
+    list-style: none;
+    background-color: rgba(128, 128, 128, 0.37);
+}
+
+.menu-filters td {
+    min-width: 150px;
+    background-color: #FCD066;
+    color: #003B55;
+    padding: 1%;
 }
 
 .select-menu {

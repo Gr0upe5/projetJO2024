@@ -28,115 +28,136 @@
     <div class='container text-center'>
         <h1 class="text-light position-relative mt-3 bg-light text-dark p-2">Olympics' Traveler</h1>
     </div>-->
+    <main role="main" style="background-color: #FCD066">
+        <!--Carte gmaps -->
+        <div class="container-lg mt-1" style="background-color: #FCD066; ">
+            <div class="row">
 
-    <!--Carte gmaps -->
-    <div class="container-lg mt-1  ">
-        <ul class="  nav justify-content-center mx-auto nav-map pb-1 pt-2 rounded-top container">
-            <li class="nav-item">
-                <div class="dropdown">
-                    <a class="btn dropdown-toggle mr-2 menu-list text-light" href="#" role="button"
-                        id="dropdownMenuSports" style="background-color: #003B55" data-toggle="dropdown">Sports</a>
-                    <div class="dropdown-menu select-menu overflow-auto" id="sport-select">
-                    </div>
-                </div>
-            </li>
-            <li class="nav-item">
-                <div class="dropdown">
-                    <a class="btn dropdown-toggle mr-5 menu-list text-light" href="#" role="button"
-                        id="dropdownMenuSports" style="background-color: #003B55" data-toggle="dropdown">Villes</a>
-                    <div class="dropdown-menu select-menu overflow-auto" id="city-select">
-                    </div>
-                </div>
-            </li>
-            <li>
-                <form class="form-inline">
-                    <input class="form-control mr-1" type="search" placeholder="Rechercher">
-                    <button class="btn btn-outline-light my-sm-0" type="submit"
-                        style="background-color: #003B55">Rechercher</button>
-                </form>
-            </li>
-        </ul>
-        <div id="map" class=" container-lg"></div>
+                <table class=" nav justify-content-center nav-map  pt-2 rounded-top container">
+                    <tr class="menu-filters">
+                        <td class="nav-item">
+                            <div class="dropdown">
+                                <a class="btn dropdown-toggle  menu-list" href="#" role="button" id="dropdownMenuSports"
+                                    data-toggle="dropdown">Sports</a>
+                                <div class="dropdown-menu select-menu overflow-auto" id="sport-select">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="nav-item">
+                            <div class="dropdown">
+                                <a class="btn dropdown-toggle menu-list" href="#" role="button" id="dropdownMenuSports"
+                                    data-toggle="dropdown">Villes</a>
+                                <div class="dropdown-menu select-menu overflow-auto" id="city-select">
+                                </div>
+                            </div>
+                        </td>
 
-    </div>
-    <!--Présentation du site-->
-    <div id="fiche-site" class="container mx-auto hidden mt-3">
-        <div class="bg-light rounded-top" style="border-radius: 20px">
-            <button id="quit-button" class="bg-light float-left rounded-top">✕</button>
-            <button id="prev-button" class="bg-light float site-button ">&laquo;</button>
-            <button id="next-button" class="bg-light float-right site-button rounded-top">&raquo;</button>
+                    </tr>
+                </table>
+            </div>
+            <div class="row">
 
-        </div>
-        <div class="p-2 pt-0 text-center inner-site">
-            <h2 class="bg-light" id="site-title"></h2>
-            <div class="row text-left">
-                <div class="col-sm" id="desc-site">
-                    <h4>Description</h4>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse ipsa corporis suscipit
-                        reprehenderit, quaerat ratione architecto sit asperiores ullam dolore expedita culpa minus quasi
-                        ipsam officiis? Ab eos in nisi?
-                    </p>
-                </div>
-                <div id="carouselPhotosSite" class="carousel slide w-50 float-right col-sm" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="..." class="d-block w-100" alt="..." id="img-site1">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="..." class="d-block w-100" alt="..." id="img-site2">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="..." class="d-block w-100" alt="..." id="img-site3">
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselPhotosSite" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselPhotosSite" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                <div id="map" class=" container-lg"></div>
+                <div id="results">
+
                 </div>
             </div>
-            <div class="row text-left">
-                <div class="col-sm">
-                    <h4>Epreuves</h4>
-                    <p id="epr-site">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe magni magnam, alias laborum
-                        necessitatibus suscipit perferendis enim hic, nesciunt fugit aperiam blanditiis voluptas
-                        architecto labore iusto repudiandae distinctio! Molestias, nulla?
-                    </p>
-                </div>
-                <div class="col-sm">
-                    <h4>Lieux à visiter</h4>
-                    <p id="visit-site">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae hic eius ab. Accusantium, culpa
-                        ducimus eveniet laborum, dolores a fugiat error facere officia praesentium eaque nulla
-                        voluptatibus! Voluptates, doloremque ut!
-                    </p>
+            <div class="row">
+                <div id="show-filters" id="" class=" menu-filters container text-light">
+                    <table class="mx-auto">
+                        <tr>
+                            <td><b>Ville</b>: <span id="city-filter"></span></td>
+                            <td><b>Sport</b>: <span id="sport-filter"></span></td>
+                            <td><b>Résultats:</b>: <span id="nb-markers"></span></td>
+                            <td><button onclick="initMarkers()"
+                                    class="mx-auto bg-light float-right site-button rounded-top">Reinitialiser les
+                                    filtres</button></td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
-    </div>
-    <div id="socials-footer" class="container mt-5">
-        <ul class="nav justify-content-center">
-            <li>
-                <a href="https://www.paris2024.org/fr/"><img src="assets/svg/olympicRings.svg" alt="Site Officiel" height="70px"
-                        width="150px" class="nav-item social-icon" ></a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/paris2024/?hl=fr"><img src="assets/svg/instagram.svg" alt="Instagram"
-                        height="70px" width="70px" class="nav-item social-icon ml-4"></a>
-            </li>
+        </main>
+        <!--Présentation du site-->
+        <div id="fiche-site" class="container mx-auto hidden mt-3">
+            <div class="bg-light rounded-top">
+                <button id="quit-button" class="bg-light float-left rounded-top">✕</button>
+                <button id="prev-button" class="bg-light float site-button ">&laquo;</button>
+                <button id="next-button" class="bg-light float-right site-button rounded-top">&raquo;</button>
+
+            </div>
+
+            <div class="p-2 pt-0 text-center inner-site">
+                <h2 class="bg-light" id="site-title"></h2>
+                <div class="row text-left">
+                    <div class="col-sm" >
+                        <h4>Description</h4>
+                        <p id="descr-site">
+                            
+                        </p>
+                    </div>
+                    <div id="carouselPhotosSite" class="carousel slide w-50 float-right col-sm" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="..." class="d-block w-100" alt="..." id="img-site1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="..." class="d-block w-100" alt="..." id="img-site2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="..." class="d-block w-100" alt="..." id="img-site3">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselPhotosSite" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselPhotosSite" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-sm">
+                        <h4>Epreuves</h4>
+                        <p id="epr-site">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe magni magnam, alias laborum
+                            necessitatibus suscipit perferendis enim hic, nesciunt fugit aperiam blanditiis voluptas
+                            architecto labore iusto repudiandae distinctio! Molestias, nulla?
+                        </p>
+                    </div>
+                    <div class="col-sm">
+                        <h4>Lieux à visiter</h4>
+                        <p id="visit-site">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae hic eius ab. Accusantium,
+                            culpa
+                            ducimus eveniet laborum, dolores a fugiat error facere officia praesentium eaque nulla
+                            voluptatibus! Voluptates, doloremque ut!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="socials-footer" class="container mt-5">
+            <ul class="nav justify-content-center">
+                <li>
+                    <a href="https://www.paris2024.org/fr/"><img src="assets/svg/olympicRings.svg" alt="Site Officiel"
+                            height="70px" width="150px" class="nav-item social-icon"></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/paris2024/?hl=fr"><img src="assets/svg/instagram.svg"
+                            alt="Instagram" height="70px" width="70px" class="nav-item social-icon ml-4"></a>
+                </li>
                 <a href="https://www.instagram.com/paris2024/?hl=fr"><img src="assets/svg/twitter.svg" alt="Twitter"
                         height="70px" width="70px" class="nav-item social-icon ml-4"></a>
-            <li>
+                <li>
 
-            </li>
-        </ul>
-    </div>
+                </li>
+            </ul>
+        </div>
+    
     <!--Resultats derniere épreuve / Actu ?
 		<section id="result-epr" class="mt-2">
 			<div class="bg-secondary container">
@@ -186,7 +207,9 @@
     <script src="http://maps.google.com/maps/api/js?key=AIzaSyAX6pUQMV4uWw7isouqkNfVs7xqrglMjoY&callback=initMap"
         type="text/javascript"></script>
     <script src="assets/js/gmaps.js"></script>
+
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/app.js"></script>
 
 </body>
 
