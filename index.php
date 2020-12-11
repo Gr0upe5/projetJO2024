@@ -10,85 +10,99 @@
 </head>
 
 <body class='bg-jo'>
-
-    <!--Navbar verticale
-		<div class="float-lg-left">
-			<nav id="side-navbar" class="bg-light text-center">
-				<a class="navbar-brand mx-auto" href="#"><?php include 'assets/svg/logoJO2024.php'?></a>
-				<div id="navbar">
-					<ul class="nav flex-column">
-						<li class="nav-item active"><a class="nav-link border-top" href="#">Accueil</a></li>
-						<li class="nav-item border-top"><a class="nav-link disabled" href="#">Résultats des épreuves</a></li>
-						<li class="nav-item border-top"><a class="nav-link" href="#">Langue</a></li>
-					</ul>
-				</div>
-			</nav>
-		</div>-->
-    <!--Header
-    <div class='container text-center'>
-        <h1 class="text-light position-relative mt-3 bg-light text-dark p-2">Olympics' Traveler</h1>
-    </div>-->
-    
-        <!--Carte gmaps -->
-        <div class="container-lg mt-1" style="background-color: #FCD066; ">
-            <div class="row-lg">
-                <table class=" nav nav-map pt-2 rounded-top ">
-                    <tr class="menu-filters">
-                        <td class="nav-item">
-                            <div class="dropdown">
-                                <a class="btn dropdown-toggle btn-light menu-list" href="#" role="button"
-                                    id="dropdownMenuSports" data-toggle="dropdown">Sports</a>
-                                <div class="dropdown-menu select-menu overflow-auto" id="sport-select">
-                                </div>
-                            </div>
-                        </td>
-                        <td class="nav-item">
-                            <div class="dropdown">
-                                <a class="btn dropdown-toggle btn-light menu-list" href="#" role="button"
-                                    id="dropdownMenuSports" data-toggle="dropdown">Villes</a>
-                                <div class="dropdown-menu select-menu overflow-auto" id="city-select">
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-                <div class="row mx-auto">
-                    <div id="map" class="col-xl-auto col-md-8 col"></div>
-                    <div class="col-lg-auto col-md-auto col">
-                        <div id="results"></div>
-                    </div>
+    <header class="bg-white p-2">
+        <h1 style="color:#003B55" class="mx-auto">Olympics' Traveler</h1>
+    </header>
+    <div class="d-flex flex-row-reverse">
+        <button type="button" data-toggle="modal" data-target="#modalAbout" class="btn mr-5 text-light">
+            à propos
+        </button>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="modalAbout" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalAbout">A propos</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <div class="col-lg row-md row-sm">
-                    <div id="show-filters" id="" class=" menu-filters text-light">
-                            <table class="">
-                                <td><b>Résultats</b>: <span id="nb-markers"></span> sites trouvés</td>
-                                <tr>
-                                    <td><span id="city-filter" class="hidden"></span></td>
-                                    <td><span id="sport-filter"></span></td>
-                                    <button onclick="initMarkers()"
-                                    class="mx-auto float-right site-button" style="background-color: #FCD066;">Reinitialiser les
-                                    filtres</button>
-                                </tr>
-                            </table>
-                            <td>
-                                
-                            </td>
-                        </div>
-                    </div>
+                <div class="modal-body text-center">
+                    Cette application web a été developpé dans le cadre d'un hackathon organisé par l'école DORANCO sur le
+                    theme des Jeux Olympiques de 2024.<br><br>
+                    <b>Membres de l'équipe: Didier PRADEL, Adel TERKI, Racim TAMGLIT.</b>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
                 </div>
             </div>
         </div>
+    </div>
+    <!--Carte gmaps -->
+    <main style="background-color: #FCD066"; class="container">
+        
     
+    <div class="container-lg mt-1" style="background-color: #FCD066; ">
+        <div class="row-lg">
+            <table class=" nav nav-map pt-2 rounded-top ">
+                <tr class="menu-filters">
+                    <td class="nav-item">
+                        <div class="dropdown">
+                            <a class="btn dropdown-toggle btn-light menu-list" href="#" role="button"
+                                id="dropdownMenuSports" data-toggle="dropdown">Sports</a>
+                            <div class="dropdown-menu select-menu overflow-auto" id="sport-select">
+                            </div>
+                        </div>
+                    </td>
+                    <td class="nav-item">
+                        <div class="dropdown">
+                            <a class="btn dropdown-toggle btn-light menu-list" href="#" role="button"
+                                id="dropdownMenuSports" data-toggle="dropdown">Villes</a>
+                            <div class="dropdown-menu select-menu overflow-auto" id="city-select">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="row mx-auto">
+                <div id="map" class="col-xl-auto col-lg-8 col-md-7 col-sm-5 col"></div>
+                <div class="col-xl-3 col-lg-auto col-md col-sm col">
+                    <div id="results"></div>
+                </div>
+            </div>
+            <div class="col-lg row-md row-sm">
+                <div id="show-filters" id="" class=" menu-filters text-light">
+                    <table class="">
+                        <td><b>Résultats</b>: <span id="nb-markers"></span> sites trouvés</td>
+                        <tr>
+                            <td><span id="city-filter" class="hidden"></span></td>
+                            <td><span id="sport-filter"></span></td>
+                            <button onclick="initMarkers()" class="mx-auto float-right site-button"
+                                style="background-color: #FCD066;">Reinitialiser les
+                                filtres</button>
+                        </tr>
+                    </table>
+                    <td>
+
+                    </td>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
     <!--Présentation du site-->
-    <div id="fiche-site" class="container mx-auto hidden mt-3">
+    <div id="fiche-site" class="container mx-auto hidden mt-3" ">
         <div class="bg-light rounded-top">
             <button id="quit-button" class="bg-light float-left rounded-top">✕</button>
             <button id="prev-button" class="bg-light float site-button ">&laquo;</button>
-            <button id="next-button" class="bg-light float-right justify-content-end site-button rounded-top">&raquo;</button>
+            <button id="next-button"
+                class="bg-light float-right justify-content-end site-button rounded-top">&raquo;</button>
 
         </div>
 
-        <div class="p-2 pt-0 text-center inner-site">
+        <div class="p-2 pt-0 text-center inner-site " style="background-color: #f6dc9e; border-bottom:15px solid #FCD066 ">
             <h2 class="bg-light" id="site-title"></h2>
             <div class="row text-left">
                 <div class="col-sm">
@@ -140,8 +154,8 @@
             </div>
         </div>
     </div>
-
-    <div id="socials-footer" class="container mt-5">
+    </main>
+    <div id="socials-footer" class="container mt-5 mb-3 pb-3">
         <ul class="nav justify-content-center">
             <li>
                 <a href="https://www.paris2024.org/fr/"><img src="assets/svg/olympicRings.svg" alt="Site Officiel"
@@ -158,7 +172,7 @@
             </li>
         </ul>
     </div>
-
+    
     <!--Resultats derniere épreuve / Actu ?
 		<section id="result-epr" class="mt-2">
 			<div class="bg-secondary container">

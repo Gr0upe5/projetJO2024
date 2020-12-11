@@ -86,7 +86,7 @@
 }
 
 .bg-jo {
-    background: #003B55;
+    background: no-repeat #003B55 linear-gradient(black, #003B55, #003B55);
 }
 
 .hidden {
