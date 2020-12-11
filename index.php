@@ -53,8 +53,8 @@
                     </tr>
                 </table>
                 <div class="row mx-auto">
-                    <div id="map" class="col"></div>
-                    <div class="col">
+                    <div id="map" class="col-xl-auto col-md-8 col"></div>
+                    <div class="col-lg-auto col-md-auto col">
                         <div id="results"></div>
                     </div>
                 </div>
