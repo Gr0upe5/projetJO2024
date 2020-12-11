@@ -10,14 +10,15 @@
 </head>
 
 <body class='bg-jo'>
-    <header class="bg-white p-2">
+    <header class=" d-flex bg-white p-2">
         <h1 style="color:#003B55" class="mx-auto">Olympics' Traveler</h1>
-    </header>
-    <div class="d-flex flex-row-reverse">
-        <button type="button" data-toggle="modal" data-target="#modalAbout" class="btn mr-5 text-light">
+    
+    <div class="d-flex flex-row-reverse ">
+        <button type="button" data-toggle="modal" data-target="#modalAbout" class="btn btn-dark mr-5 text-light">
             à propos
         </button>
     </div>
+    </header>
     <!-- Modal -->
     <div class="modal fade" id="modalAbout" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -40,10 +41,10 @@
         </div>
     </div>
     <!--Carte gmaps -->
-    <main style="background-color: #FCD066"; class="container">
+    <main style="background-color: #FCD066"; class="container rounded-top">
         
     
-    <div class="container-lg mt-1" style="background-color: #FCD066; ">
+    <div class="container-lg mt-5 " style="background-color: #FCD066;">
         <div class="row-lg">
             <table class=" nav nav-map pt-2 rounded-top ">
                 <tr class="menu-filters">
