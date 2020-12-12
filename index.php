@@ -10,11 +10,10 @@
 </head>
 
 <body class='bg-jo'>
-    <header class=" d-flex bg-white p-2">
-        <h1 style="color:#003B55" class="mx-auto">Olympics' Traveler</h1>
-    
+    <header class=" p-2">
+        <a class=" d-flex" href=""><h1 style="color: #FCD066" class="mx-auto">Olympics' Traveler</h1></a>
     <div class="d-flex flex-row-reverse ">
-        <button type="button" data-toggle="modal" data-target="#modalAbout" class="btn btn-dark mr-5 text-light">
+        <button type="button" data-toggle="modal" data-target="#modalAbout" class="btn  mr-2 text-light">
             à propos
         </button>
     </div>
@@ -34,19 +33,16 @@
                     theme des Jeux Olympiques de 2024.<br><br>
                     <b>Membres de l'équipe: Didier PRADEL, Adel TERKI, Racim TAMGLIT.</b>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                </div>
             </div>
         </div>
     </div>
     <!--Carte gmaps -->
     <main style="background-color: #FCD066"; class="container rounded-top">
-        
-    
     <div class="container-lg mt-5 " style="background-color: #FCD066;">
         <div class="row-lg">
-            <table class=" nav nav-map pt-2 rounded-top ">
+        <h6 class=" pt-2">Chercher par : </h6>
+            <table class=" nav nav-map rounded-top ">
+                
                 <tr class="menu-filters">
                     <td class="nav-item">
                         <div class="dropdown">
