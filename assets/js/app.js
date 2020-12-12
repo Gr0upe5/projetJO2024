@@ -386,7 +386,7 @@ let currentM = 0;
 $(function() {
     $('#prev-button').click(function() {
         if (currentM == 0) {
-            currentM = filtredMarkers.length;
+            currentM = filtredMarkers.length - 1;
         } else
             currentM -= 1;
         remplirFicheSite(currentM);
