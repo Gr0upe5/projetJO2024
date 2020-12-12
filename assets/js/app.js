@@ -385,16 +385,18 @@ for (let k = 0; k < markers.length; k++) {
 let currentM = 0;
 $(function() {
     $('#prev-button').click(function() {
-        if (currentM == 0) {
+        if (currentM <= 0) {
+            if (currentM == filtredMarkers.length)
+                currentM = 0;
             currentM = filtredMarkers.length - 1;
         } else
             currentM -= 1;
         remplirFicheSite(currentM);
     });
     $('#next-button').click(function() {
-        if (currentM == filtredMarkers.length - 1) {
+        if (currentM >= filtredMarkers.length - 1) {
             currentM = 0;
-        } else
+        } else if (currentM < filtredMarkers.length - 1)
             currentM += 1;
         remplirFicheSite(currentM);
 

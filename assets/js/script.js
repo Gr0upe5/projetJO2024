@@ -42,16 +42,16 @@ function remplirFicheSite(arg) {
     $("#epr-site").empty();
     for (i = 0; i < sports.length; i++) {
         if (filtredMarkers[arg].sport.a == i) {
-            $("#epr-site").append("<li>" + sports[i] + "</li>");
+            $("#epr-site").append("<li class='epr-list'>" + sports[i] + "</li>");
         }
         if (filtredMarkers[arg].sport.b == i) {
-            $("#epr-site").append("<li>" + sports[i] + "</li>");
+            $("#epr-site").append("<li class='epr-list'>" + sports[i] + "</li>");
         }
         if (filtredMarkers[arg].sport.c == i) {
-            $("#epr-site").append("<li>" + sports[i] + "</li>");
+            $("#epr-site").append("<li class='epr-list'>" + sports[i] + "</li>");
         }
         if (filtredMarkers[arg].sport.d == i) {
-            $("#epr-site").append("<li>" + sports[i] + "</li>");
+            $("#epr-site").append("<li class='epr-list'>" + sports[i] + "</li>");
         }
     }
     map.setZoom(18);
