@@ -55,6 +55,7 @@ var markers = new Array(
         title: 'Village olympique de Saint-Denis',
         map,
         visible: true,
+        sport: {},
         ville: 0,
         descr: "Le village olympique de Saint-Denis est un projet de village olympique prévu pour accueillir les athlètes lors de l'organisation des Jeux olympiques et des Jeux paralympiques à Paris, en France, durant l'été 2024.",
     }),
@@ -74,6 +75,7 @@ var markers = new Array(
         map,
         title: 'Stade olympique Yves-du-Manoir',
         visible: true,
+        sport: {},
         ville: 4,
         descr: "Le stade olympique Yves-du-Manoir est un stade omnisports situé à Colombes (Hauts-de-Seine), dans la banlieue nord-ouest de Paris. Ce stade a notamment accueilli les Jeux olympiques d'été de 1924, la finale de la Coupe du monde de football 1938, quarante finales de la Coupe de France de football, un grand nombre de finales du championnat de France de rugby à XV ainsi que des rencontres internationales des équipes de France de football et de rugby à XV.",
     }),
@@ -113,6 +115,7 @@ var markers = new Array(
         map,
         title: 'Grande halle de la Villette',
         visible: true,
+        sport: {},
         ville: 2,
         descr: "La grande halle de la Villette, pouvant éventuellement être abrégée en « Grande Halle », est un bâtiment des anciens abattoirs composé de structures en charpente métalliques construit dans le quartier de la Villette à Paris. Elle se trouve actuellement place de la Fontaine-aux-Lions à l'entrée Sud du parc de la Villette (métro Porte de Pantin).",
     }),
@@ -173,7 +176,6 @@ var markers = new Array(
         title: "Parc des Princes",
         visible: true,
         sport: { a: 12 },
-        football: true,
         ville: 2,
         descr: "Le Parc des Princes est un stade situé au sud-ouest de la ville de Paris, dans le 16e arrondissement depuis 1897 et sur le périphérique parisien dans sa configuration actuelle, depuis 1971 près de la commune de Boulogne-Billancourt. Constituant le plus important stade français de 1972 à 1998, il est actuellement le cinquième plus grand stade français, mais toujours l'un des plus anciens et des plus connus, sinon le plus connu de la région parisienne avec le non moins fameux Stade de France, situé plus au nord, en proche banlieue, à Saint-Denis.",
     }),
@@ -409,5 +411,5 @@ for (i = 0; i < villes.length; i++) {
 }
 
 for (i = 0; i < sports.length; i++) {
-    $("#sport-select").append('<a class="dropdown-item sports-item" onclick="sortSports(' + i + ')" href="#">' + sports[i] + '</a>');
+    $("#sport-select").append('<a class="dropdown-item sports-item" onclick="sortSports(' + i + ')" type="button">' + sports[i] + '</a>');
 }
