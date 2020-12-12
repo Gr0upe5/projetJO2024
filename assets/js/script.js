@@ -69,6 +69,7 @@ function sortVilles(arg) {
     }
     refreshMap();
     showFiltredM();
+    $("#sport-filter").addClass("hidden").empty();
     $("#city-filter").removeClass("hidden").empty().append(villes[arg]);
 }
 
@@ -82,6 +83,7 @@ function sortSports(arg) {
     }
     refreshMap();
     showFiltredM();
+    $("#city-filter").addClass("hidden").empty();
     $("#sport-filter").removeClass("hidden").empty().append(sports[arg]);
 }
 

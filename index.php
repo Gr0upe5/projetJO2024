@@ -77,7 +77,7 @@
                         <table class="">
                             <td><b>Résultats</b>: <span id="nb-markers"></span> sites trouvés</td>
                             <tr>
-                                <td><span id="sport-filter" class="hidden inner-filter"></span><span id="city-filter"
+                                <td>Filtre actif:<span id="sport-filter" class="hidden inner-filter"></span><span id="city-filter"
                                         class="hidden inner-filter"></span></td>
 
                                 <button onclick="initMarkers()" class="mx-auto float-right site-button"
