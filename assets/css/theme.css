@@ -25,6 +25,11 @@
     bottom: -500px;
 }
 
+#descr-site {
+    height: 150px;
+    overflow-y: auto;
+}
+
 #fiche-site {
     position: relative;
     max-width: 820px;
@@ -106,7 +111,7 @@
     outline-color: white;
 }
 
-#city-filter {
+.inner-filter {
     background-color: white;
     border-radius: 10px;
     padding: 0px 10px 0px 10px;

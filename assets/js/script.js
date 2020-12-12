@@ -25,6 +25,7 @@ function refreshMap() {
 
 function initMarkers() {
     $("#city-filter").addClass("hidden").empty();
+    $("#sport-filter").addClass("hidden").empty();
     for (let i = 0; i < markers.length; i++) {
         markers[i].visible = true;
     }
@@ -38,6 +39,21 @@ function remplirFicheSite(arg) {
     $("#fiche-site").removeClass("hidden");
     $("#site-title").empty().append(filtredMarkers[arg].title);
     $("#descr-site").empty().append(filtredMarkers[arg].descr);
+    $("#epr-site").empty();
+    for (i = 0; i < sports.length; i++) {
+        if (filtredMarkers[arg].sport.a == i) {
+            $("#epr-site").append("<li>" + sports[i] + "</li>");
+        }
+        if (filtredMarkers[arg].sport.b == i) {
+            $("#epr-site").append("<li>" + sports[i] + "</li>");
+        }
+        if (filtredMarkers[arg].sport.c == i) {
+            $("#epr-site").append("<li>" + sports[i] + "</li>");
+        }
+        if (filtredMarkers[arg].sport.d == i) {
+            $("#epr-site").append("<li>" + sports[i] + "</li>");
+        }
+    }
     map.setZoom(18);
     map.setCenter(filtredMarkers[arg].getPosition());
     currentM = arg;
@@ -56,11 +72,24 @@ function sortVilles(arg) {
     $("#city-filter").removeClass("hidden").empty().append(villes[arg]);
 }
 
+function sortSports(arg) {
+    for (u = 0; u < markers.length; u++) {
+        if (markers[u].sport.a == arg) {
+            markers[u].visible = true;
+        } else {
+            markers[u].visible = false;
+        }
+    }
+    refreshMap();
+    showFiltredM();
+    $("#sport-filter").removeClass("hidden").empty().append(sports[arg]);
+}
+
 function showFiltredM() {
     $('.results-item').remove();
     if (filtredMarkers.length != 0) {
         for (let i = 0; i < filtredMarkers.length; i++) {
-            $('#results').append('<li class="results-item"><a type="button"  onclick="remplirFicheSite(' + i + ')">' + filtredMarkers[i].title + '</a></li>');
+            $('#results').append('<li class="results-item"><a type="button" onclick="remplirFicheSite(' + i + ')">' + filtredMarkers[i].title + '</a></li>');
         }
     }
 }
