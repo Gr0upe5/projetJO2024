@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>Olympics Traveler</title>
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
+
 <body class='bg-jo'>
     <header class=" p-2">
         <a class=" d-flex" href="">
@@ -75,14 +77,15 @@
                         <table class="">
                             <td><b>Résultats</b>: <span id="nb-markers"></span> sites trouvés</td>
                             <tr>
-                                <td><span id="city-filter" class="hidden inner-filter">zryzry</span></td>
-                                <td><span id="sport-filter" class="hidden inner-filter">eryeryery</span></td>
+                                <td><span id="sport-filter" class="hidden inner-filter"></span><span id="city-filter"
+                                        class="hidden inner-filter"></span></td>
+
                                 <button onclick="initMarkers()" class="mx-auto float-right site-button"
                                     style="background-color: #FCD066;">Reinitialiser les
                                     filtres</button>
                             </tr>
                         </table>
-                        
+
                     </div>
                 </div>
             </div>
@@ -102,7 +105,7 @@
                 <div class="col-sm-4 col-6">
                     <h4>Epreuves</h4>
                     <p id="epr-site" style="height: 150px">
-                        
+
                     </p>
                 </div>
                 <div id="carouselPhotosSite" class="carousel slide w-50 float-right col-sm col-5" data-ride="carousel">

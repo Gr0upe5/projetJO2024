@@ -74,7 +74,7 @@ function sortVilles(arg) {
 
 function sortSports(arg) {
     for (u = 0; u < markers.length; u++) {
-        if (markers[u].sport.a == arg || markers[u].sport.b == arg) {
+        if (markers[u].sport.a == arg || markers[u].sport.b == arg || markers[u].sport.c == arg || markers[u].sport.d == arg) {
             markers[u].visible = true;
         } else {
             markers[u].visible = false;
