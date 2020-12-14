@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>Olympics Traveler</title>
@@ -10,14 +9,12 @@
 </head>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Cabin:ital@0;1&display=swap" rel="stylesheet">
-
 <body class='bg-jo'>
     <header class="p-2" style="font-family: Cabin; text-indent: 10px; ">
-        <a class="bg-light" href="">
-            <img class="float-left" style="position: absolute; " src="assets/svg/olympicRings.svg" height="50px"
+        <a class="" href="">
+            <img class="float-left" style="position: absolute; filter: drop-shadow(0px 0px 5px black); margin-left: 10px" src="assets/svg/olympicRings.svg" height="50px"
                 width="107px" class="nav-item social-icon ml-4">
-            <h1 style="color: white; font-size:25px; position: absolute; top:20px; left: 5px; text-shadow: 1px 1px 2px white, 0 0 0.2em black;"
-                class="w-auto">Olympics' Traveler</h1>
+            <h1 id="header-title" class="w-auto">Olympics' Traveler</h1>
         </a>
     </header>
     <!-- Modal -->
@@ -35,21 +32,21 @@
                     le theme des Jeux Olympiques de 2024.<br><br>
                 </div>
                 <div class="modal-footer text-center">
-                    <b class="">Membres de l'équipe: Didier PRADEL, Adel TERKI, Racim TAMGLIT.</b>
+                    <b class="">Membres de l'équipe: Didier PRADEL et Adel TERKI</b>
                 </div>
             </div>
         </div>
     </div>
     <!--Carte gmaps -->
-    <main style="min-height: 1200px" class="pb-3 mt-5 container rounded-top">
+    <main style=" margin-top: 80px" class="pb-3 container rounded-top">
         <div class="container-lg mt-1">
             <div class="row-lg">
-                <h6 class=" pt-2">Chercher par : </h6>
+                <h6 class="p-1 ">Chercher par : </h6>
                 <table class=" nav nav-map rounded-top ">
                     <tr class="menu-filters">
                         <td class="nav-item">
                             <div class="dropdown">
-                                <a class="btn dropdown-toggle  menu-list" href="#" role="button" id="dropdownMenuSports"
+                                <a class="btn dropdown-toggle menu-list" href="#" role="button" id="dropdownMenuSports"
                                     data-toggle="dropdown">Sports</a>
                                 <div class="dropdown-menu select-menu overflow-auto" id="sport-select">
                                 </div>
@@ -57,7 +54,7 @@
                         </td>
                         <td class="nav-item">
                             <div class="dropdown">
-                                <a class="btn dropdown-toggle  menu-list" href="#" role="button" id="dropdownMenuSports"
+                                <a class="btn dropdown-toggle menu-list" href="#" role="button" id="dropdownMenuSports"
                                     data-toggle="dropdown">Villes</a>
                                 <div class="dropdown-menu select-menu overflow-auto" id="city-select">
                                 </div>
@@ -78,9 +75,7 @@
                             <tr>
                                 <td>Filtre actif:<span id="sport-filter" class="hidden inner-filter"></span><span
                                         id="city-filter" class="hidden inner-filter"></span></td>
-                                <button onclick="initMarkers()" class="btn mx-auto float-right site-button"
-                                    style="background-color: white;">Reinitialiser les
-                                    filtres</button>
+                                <button onclick="initMarkers()" class="btn mx-auto float-right site-button"> Reinitialiser les filtres</button>
                             </tr>
                         </table>
                     </div>
@@ -92,74 +87,51 @@
         <div class=" rounded-top bg-dark ">
             <button id="quit-button" class=" bg-dark float-left rounded-top text-light ">✕</button>
             <button id="prev-button" class=" bg-dark float site-button text-light ">&laquo;</button>
-            <button id="next-button"
-                class="bg-dark float-right justify-content-end site-button rounded-top text-light">&raquo;</button>
+            <button id="next-button" class="bg-dark float-right justify-content-end site-button rounded-top text-light">&raquo;</button>
         </div>
         <div class="p-2 pt-0 text-center inner-site"
             style="background-color: white;">
-            <h2 class=" " id="site-title"></h2>
+            <h2 class="" id="site-title"></h2>
             <div class="row text-left">
-                <div class="col-sm-4 col-6">
-                    <h4>Epreuves</h4>
-                    <p id="epr-site" style="height: 150px">
-                    </p>
-                </div>
-                <div id="carouselPhotosSite" class="carousel slide w-50 float-right col-sm col-5" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class=" carousel-item active ">
-                            <img src=" ... " class="d-block w-100" alt=" ..." id="img-site1">
-                        </div>
-                        <div class=" carousel-item ">
-                            <img src=" ... " class="d-block w-100" alt=" ... " id="img-site2">
-                        </div>
-                        <div class=" carousel-item ">
-                            <img src=" ... " class="d-block w-100" alt=" ... " id="img-site3">
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselPhotosSite" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselPhotosSite" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
-            <div class="row text-left">
-                <div class="col-sm">
+                <div class="col">
                     <h4>Description</h4>
                     <p id="descr-site">
                     </p>
                 </div>
+                </div>
+            <div class="row text-left">
+                <div class="col col-md-6 col-lg-6">
+                    <h4>Epreuves</h4>
+                    <p id="epr-site" style="height: 150px; "></p>
+                </div>
+                <div id="" class="col col-md-4 col-sm-6 pb-2">
+                    <img id="photo1" src="" alt="" class="site-photos"> 
+                </div>
+            </div>
+            
             </div>
         </div>
-        </div>
     </main>
+    
     <div id="socials-footer" class="container mt-5 mb-3 pb-3">
         <ul class=" nav justify-content-center ">
             <li>
-                <a href="https://www.paris2024.org/fr/"><img src="assets/svg/logoJO2024.svg" alt="Site Officiel"
-                        height=" 70px " width=" 150px " class=" nav-item social-icon "></a>
+                <a href="https://fr-fr.facebook.com/Paris2024/"><img src="assets/svg/facebook.svg" alt="Site Officiel"
+                        height=" 70px " width=" 70px " class=" nav-item social-icon "></a>
             </li>
             <li>
                 <a href="https://www.instagram.com/paris2024/?hl=fr"><img src=" assets/svg/instagram.svg " alt="Instagram"
                         height=" 70px " width=" 70px " class=" nav-item social-icon ml-4 "></a>
             </li>
-            <a href="https://www.instagram.com/paris2024/?hl=fr"><img src=" assets/svg/twitter.svg " alt="Twitter"
-                        height=" 70px " width=" 70px " class=" nav-item social-icon ml-4 "></a>
-            <li>
-            </li>
+            <a href="https://www.instagram.com/paris2024/?hl=fr"><img src=" assets/svg/twitter.svg " alt="Twitter" height=" 70px " width=" 70px " class=" nav-item social-icon ml-4 "></a>
         </ul>
     </div>
-    <div>
-        <div class="float-right">
-            <button type="button" data-toggle="modal" data-target="#modalAbout" class="btn mr-2 text-light">
-                à propos
-            </button>
-        </div>
+    <div class="">
+        <button type="button" data-toggle="modal" data-target="#modalAbout" class="btn mr-2 text-light float-right">
+            à propos
+        </button>
     </div>
-    <!--SCRIPTS-->>
+    <!--SCRIPTS-->
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>

@@ -39,15 +39,15 @@ function remplirFicheSite(arg) {
     $("#fiche-site").removeClass("hidden");
     $("#site-title").empty().append(filtredMarkers[arg].title);
     $("#descr-site").empty().append(filtredMarkers[arg].descr);
+    $("#photo1").attr("src", filtredMarkers[arg].photo)
     $("#epr-site").empty();
     for (i = 0; i < sports.length; i++) {
         if (filtredMarkers[arg].sport.a == i || filtredMarkers[arg].sport.b == i || filtredMarkers[arg].sport.c == i || filtredMarkers[arg].sport.d == i) {
             $("#epr-site").append("<li class='epr-list'>" + sports[i] + "</li>");
         }
-
     }
     if (document.getElementById('epr-site').childNodes.length < 1) {
-        $("#epr-site").append("<li class='epr-list'> Pas d'épreuve annoncée </li>");
+        $("#epr-site").append("<li class='epr-list' style='list-style-type: none;'> Pas d'épreuve annoncée </li>");
     }
     map.setZoom(18);
     map.setCenter(filtredMarkers[arg].getPosition());
