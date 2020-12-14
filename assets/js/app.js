@@ -361,18 +361,13 @@ for (let k = 0; k < markers.length; k++) {
         $("#descr-site").empty().append(markers[k].descr);
         $("#epr-site").empty();
         for (j = 0; j < sports.length; j++) {
-            if (markers[k].sport.a == j) {
-                $("#epr-site").append("<li>" + sports[j] + "</li>");
+            if (markers[k].sport.a == j || markers[k].sport.b == j || markers[k].sport.c == j || markers[k].sport.d == j) {
+                $("#epr-site").append("<li class='epr-list'>" + sports[j] + "</li>");
             }
-            if (markers[k].sport.b == j) {
-                $("#epr-site").append("<li>" + sports[j] + "</li>");
-            }
-            if (markers[k].sport.c == j) {
-                $("#epr-site").append("<li>" + sports[j] + "</li>");
-            }
-            if (markers[k].sport.d == j) {
-                $("#epr-site").append("<li>" + sports[j] + "</li>");
-            }
+
+        }
+        if (document.getElementById('epr-site').childNodes.length < 1) {
+            $("#epr-site").append("<li class='epr-list'> Pas d'épreuve annoncée </li>");
         }
         map.setZoom(18);
         map.setCenter(markers[k].getPosition());

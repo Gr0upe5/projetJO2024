@@ -5,6 +5,7 @@
     animation-duration: 0.5s;
     margin-top: 5px;
     margin-bottom: 5px;
+    border: 1px solid black;
 }
 
 #side-navbar {
@@ -32,7 +33,6 @@
 
 #fiche-site {
     position: relative;
-    max-width: 820px;
 }
 
 #site-title {
@@ -42,6 +42,7 @@
     text-align: center;
     padding: 0 10px 0 10px;
     margin-bottom: 15px;
+    background-color: white;
 }
 
 #quit-button {
@@ -59,6 +60,7 @@
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     float: right;
+    box-shadow: 0px 0px black;
 }
 
 .results-item {
@@ -85,13 +87,13 @@
 }
 
 .inner-site {
-    background-color: #FCD066;
+    background-color: rgb(255, 255, 255);
     color: #003B55;
     position: relative;
 }
 
 .bg-jo {
-    background: no-repeat #003B55 linear-gradient(black, #003B55, #003B55);
+    background: no-repeat #D7C378 linear-gradient( #F6F1E9, #D7C378);
 }
 
 .hidden {
