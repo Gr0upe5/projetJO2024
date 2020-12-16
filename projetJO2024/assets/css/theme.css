@@ -1,0 +1,349 @@
+#map {
+    width: 800px;
+    height: 400px;
+    position: relative;
+    animation-duration: 0.5s;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid black;
+}
+
+#side-navbar {
+    min-height: 800%;
+    left: -190px;
+    transition-duration: 0.5s;
+    position: fixed;
+    z-index: 10;
+    overflow-y: auto;
+}
+
+#side-navbar:hover {
+    left: 0px;
+}
+
+#map-options {
+    position: relative;
+    bottom: -500px;
+}
+
+#descr-site {
+    height: 100px;
+    overflow-y: auto;
+    border-bottom: 1px solid black;
+}
+
+#fiche-site {
+    position: relative;
+}
+
+#site-title {
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    padding: 0 10px 0 10px;
+    margin-bottom: 15px;
+    background-color: white;
+    text-decoration: underline solid;
+}
+
+.site-photos {
+    width: 500px;
+    height: 280px;
+    border: 1px solid black;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+#quit-button {
+    height: 40px;
+    width: 40px;
+    border: none;
+}
+
+#show-filters {
+    background-color: rgb(255, 255, 255, 0.692);
+    margin-right: 1%;
+}
+
+#results {
+    background-color: white;
+    height: 400px;
+    width: 200px;
+    overflow-y: auto;
+    display: block;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    float: right;
+    box-shadow: 0px 0px black;
+}
+
+.results-item {
+    list-style: none;
+    padding: 5px 10px 5px 10px;
+}
+
+.results-item:hover {
+    list-style: none;
+    background-color: rgba(128, 128, 128, 0.37);
+}
+
+.menu-filters td {
+    color: #003B55;
+}
+
+.select-menu {
+    height: 200px;
+    background-color: rgb(255, 255, 255, 0.4);
+}
+
+.nav-map {
+    position: relative;
+    max-width: 600px;
+}
+
+.inner-site {
+    background-color: rgb(255, 255, 255);
+    color: #003B55;
+    position: relative;
+}
+
+.bg-jo {
+    background: no-repeat #D7C378 linear-gradient( #F6F1E9, #D7C378);
+}
+
+.hidden {
+    display: none;
+}
+
+.site-button {
+    height: 40px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+}
+
+.site-button:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.menu-list {
+    border: none;
+}
+
+div .menu-list {
+    background-color: rgba(255, 255, 255, 0.692);
+}
+
+.social-icon {
+    transition-duration: 0.2s;
+}
+
+.social-icon:hover {
+    outline-color: white;
+    filter: drop-shadow(0 0 0.75rem rgb(255, 251, 252));
+    margin-top: 5px;
+}
+
+.inner-filter {
+    background-color: white;
+    border-radius: 10px;
+    padding: 0px 10px 0px 10px;
+    margin: 0px 5px 0px 5px;
+}
+
+.epr-list {
+    list-style-type: circle;
+    text-indent: 5px;
+}
+
+.dropdown .menu-list:hover {
+    color: rgb(129, 129, 129);
+}
+
+#header-title {
+    color: white;
+    font-size: 22px;
+    position: absolute;
+    margin-left: 10px;
+    top: 26px;
+    left: 5px;
+    text-shadow: 1px 1px 2px white, 3px 1px 0.1em black, -4px 2px 0.2em rgb(224, 224, 133);
+    text-transform: uppercase;
+}
+
+div .site-button:focus,
+div .menu-list:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.back {
+    position: fixed;
+    top: 5%;
+    z-index: -1;
+    width: 100%;
+    color: white;
+    font-size: 3em;
+    height: 97%;
+    left: -1000px;
+}
+
+.back1 {
+    position: fixed;
+    top: -5%;
+    z-index: -1;
+    width: 100%;
+    color: white;
+    font-size: 3em;
+    height: 97%;
+    left: -1000px;
+}
+
+header {
+    position: relative;
+    top: 0px;
+    white-space: nowrap;
+    animation: sldTitre 1s ease-in-out;
+}
+
+#socials-footer {
+    height: 5em;
+    overflow: hidden;
+}
+
+.nav:nth-child(1) {
+    height: 5em;
+    position: relative;
+    bottom: 0px;
+}
+
+.pfond {
+    margin: -5px;
+}
+
+.p0 {
+    position: relative;
+    white-space: nowrap;
+    animation: sldText 39s infinite alternate ease-in-out;
+}
+
+.p1 {
+    position: relative;
+    white-space: nowrap;
+    animation: sldText 51s infinite alternate ease-in-out;
+}
+
+.p2 {
+    position: relative;
+    white-space: nowrap;
+    animation: sldText 37s infinite alternate ease-in-out;
+}
+
+.p3 {
+    position: relative;
+    white-space: nowrap;
+    animation: sldText 42s infinite alternate ease-in-out;
+}
+
+.p4 {
+    position: relative;
+    white-space: nowrap;
+    animation: sldText 50s infinite alternate ease-in-out;
+}
+
+.p5 {
+    position: relative;
+    white-space: nowrap;
+    animation: sldText 42s infinite alternate ease-in-out;
+}
+
+.p6 {
+    position: relative;
+    white-space: nowrap;
+    animation: sldText 53s infinite alternate ease-in-out;
+}
+
+.p7 {
+    position: relative;
+    white-space: nowrap;
+    animation: sldText 35s infinite alternate ease-in-out;
+}
+
+.p8 {
+    position: relative;
+    white-space: nowrap;
+    animation: sldText 48s infinite alternate ease-in-out;
+}
+
+.p9 {
+    position: relative;
+    white-space: nowrap;
+    animation: sldText 41s infinite alternate ease-in-out;
+}
+
+body {
+    overflow-x: hidden
+}
+
+@-webkit-keyframes sldText {
+    from {
+        left: -460px;
+    }
+    to {
+        /* left: auto; */
+        left: 295px;
+    }
+}
+
+@-webkit-keyframes sldTitre {
+    from {
+        top: -100px;
+    }
+    to {
+        bottom: 200px;
+    }
+}
+
+@-webkit-keyframes sldFoot {
+    from {
+        bottom: -100px;
+    }
+    to {
+        top: 200px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .site-photos {
+        width: 200px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .site-photos {
+        width: 200px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .site-photos {
+        width: 300px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .site-photos {
+        width: 400px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .site-photos {
+        width: 500px;
+        object-fit: cover;
+    }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Olympics Traveler</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/theme.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cabin:ital@0;1&display=swap" rel="stylesheet">
+<body class='bg-jo'>
+    <header class="p-2" style="font-family: Cabin; text-indent: 10px; ">
+        <a class="" href="">
+            <img class="float-left" style="position: absolute; filter: drop-shadow(0px 0px 5px black); margin-left: 10px" src="assets/svg/olympicRings.svg" height="50px" width="107px" class="nav-item social-icon ml-4">
+            <h1 id="header-title" class="w-auto">Olympics' Traveler</h1>
+        </a>
+    </header>
+    <!-- Modal -->
+    <div class="back">
+        <p class="pfond p0">JO2024JO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCE</p>
+        <p class="pfond p1">JO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESJO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024PARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCE</p>
+        <p class="pfond p2">JO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCE</p>
+        <p class="pfond p3">JO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARISJO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUES2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCE</p>
+        <p class="pfond p4">JO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESJO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCE</p>
+        <p class="pfond p5">JO2024JEUXOLYMPIQUESFRANCEJO2024JEUXOLYMPIQUESPARIS2024JO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCE</p>
+        <p class="pfond p6">JO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESJEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCE</p>
+        <p class="pfond p7">JO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024JO2024JEUXOLYMPIQUESJEUXOLYMPIQUESPARIS2024FRANCE</p>
+        <p class="pfond p8">JO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024JO2024JEUXOLYMPIQUESJEUXOLYMPIQUESPARIS2024FRANCE</p>
+        <p class="pfond p9">JO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024JO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESFRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESFRANCEJO2024JEUXOLYMPIQUESPARIS2024JO2024JEUXOLYMPIQUESPARIS2024FRANCEJO2024JEUXOLYMPIQUESPARIS2024FRANCE</p>
+    </div>
+    <div class="modal fade" id="modalAbout" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalAbout">A propos</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Cette application web a été developpé dans le cadre d'un hackathon organisé par l'école DORANCO sur le theme des Jeux Olympiques de 2024.<br><br>
+                </div>
+                <div class="modal-footer text-center">
+                    <b class="">Membres de l'équipe: Didier PRADEL et Adel TERKI</b>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Carte gmaps -->
+    <main style="margin-top: 80px" class="pb-3 container rounded-top">
+        <div class="container-lg mt-1">
+            <div class="row-lg">
+                <h6 class="p-1">Chercher par : </h6>
+                <table class="nav nav-map rounded-top">
+                    <tr class="menu-filters">
+                        <td class="nav-item">
+                            <div class="dropdown">
+                                <a class="btn dropdown-toggle menu-list" href="#"  role="button" id="dropdownMenuSports" data-toggle="dropdown">Sports</a>
+                                    <div class="dropdown-menu select-menu overflow-auto" id="sport-select">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="nav-item">
+                            <div class="dropdown">
+                                <a class="btn dropdown-toggle menu-list" href="#" role="button" id="dropdownMenuSports" data-toggle="dropdown">Villes</a>
+                                <div class="dropdown-menu select-menu overflow-auto" id="city-select"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="row mx-auto">
+                    <div id="map" class="ml-2 col-xl-auto col-lg-8 col-md-7 col-sm-5 col"></div>
+                    <div class="col-xl-3 col-lg-auto col-md col-sm col">
+                        <div id="results"></div>
+                    </div>
+                </div>
+                <div class="col-lg row-md row-sm">
+                    <div id="show-filters" id="" class="p-1 rounded menu-filters text-light">
+                        <table class="">
+                            <td><b>Résultats</b>: <span id="nb-markers"></span> sites trouvés</td>
+                            <tr>
+                                <td>Filtre actif:<span id="sport-filter" class="hidden inner-filter"></span><span id="city-filter" class="hidden inner-filter"></span></td>
+                                <button onclick="initMarkers()" class="btn mx-auto mt-1 float-right site-button">Reinitialiser les filtres</button>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Présentation du site-->
+        <div id="fiche-site" class="container mx-auto hidden mt-3">
+        <div class="rounded-top bg-dark">
+            <button id="quit-button" class="bg-dark float-left rounded-top text-light">✕</button>
+            <button id="prev-button" class="bg-dark float site-button text-light">&laquo;</button>
+            <button id="next-button" class="bg-dark float-right justify-content-end site-button rounded-top text-light ">&raquo;</button>
+        </div>
+        <div class="p-2 pt-0 text-center inner-site"
+            style="background-color: white; ">
+            <h2 id="site-title"></h2>
+            <div class="row text-left">
+                <div class="col">
+                    <h4>Description</h4>
+                    <p id="descr-site">
+                    </p>
+                </div>
+                </div>
+            <div class="row text-left">
+                <div class="col col-md-6 col-lg-6 ">
+                    <h4>Epreuves</h4>
+                    <p id="epr-site" style="height: 150px;"></p>
+                </div>
+                <div id="" class="col col-md-4 col-sm-6 pb-2 ">
+                    <img id="photo1" src="" alt="" class="site-photos"> 
+                </div>
+            </div>
+            </div>
+        </div>
+    </main>
+    <div id="socials-footer" class="container mt-5 mb-3 pb-3" style="max-height:75px">
+        <ul class="nav justify-content-center">
+            <li>
+                <a href="https://fr-fr.facebook.com/Paris2024/"><img src="assets/svg/facebook.svg" alt="Site Officiel"
+                        height=" 70px " width=" 70px " class=" nav-item social-icon "></a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/paris2024/?hl=fr"><img src=" assets/svg/instagram.svg " alt="Instagram "
+                        height=" 70px " width=" 70px " class=" nav-item social-icon ml-4 "></a>
+            </li>
+            <a href="https://www.instagram.com/paris2024/?hl=fr"><img src=" assets/svg/twitter.svg " alt="Twitter" height=" 70px " width=" 70px " class=" nav-item social-icon ml-4 "></a>
+        </ul>
+    </div>
+    <div class="">
+        <button type="button" data-toggle="modal" data-target="#modalAbout" class="btn mr-2 text-light float-right">
+            à propos
+        </button>
+    </div>
+    <!--SCRIPTS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js "></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js " integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN " crossorigin="anonymous "></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js " integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s " crossorigin="anonymous "></script>
+            <script
+                src="http://maps.google.com/maps/api/js?key=AIzaSyAX6pUQMV4uWw7isouqkNfVs7xqrglMjoY&callback=initMap "
+                type="text/javascript "></script>
+            <script src="assets/js/gmaps.js "></script>
+            <script src="assets/js/script.js "></script>
+            <script src="assets/js/app.js "></script>
+</body>
+</html>
