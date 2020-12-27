@@ -41,7 +41,7 @@
     <main style=" margin-top: 80px" class="pb-3 container rounded-top">
         <div class="container-lg mt-1">
             <div class="row-lg">
-                <h6 class="p-1 ">Chercher par : </h6>
+                <h6 class="p-1 ">Chercher par: </h6>
                 <table class=" nav nav-map rounded-top ">
                     <tr class="menu-filters">
                         <td class="nav-item">
@@ -105,7 +105,7 @@
                     <p id="epr-site" style="height: 150px; "></p>
                 </div>
                 <div id="" class="col col-md-4 col-sm-6 pb-2">
-                    <img id="photo1" src="" alt="" class="site-photos"> 
+                    <img id="photo1" src="" alt="" class=" site-photos"> 
                 </div>
             </div>
             
@@ -114,7 +114,7 @@
     </main>
     
     <div id="socials-footer" class="container mt-5 mb-3 pb-3">
-        <ul class=" nav justify-content-center ">
+        <ul class=" nav justify-content-center " style="max-height:50px;">
             <li>
                 <a href="https://fr-fr.facebook.com/Paris2024/"><img src="assets/svg/facebook.svg" alt="Site Officiel"
                         height=" 70px " width=" 70px " class=" nav-item social-icon "></a>

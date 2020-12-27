@@ -47,14 +47,6 @@
     text-decoration: underline solid;
 }
 
-.site-photos {
-    width: 500px;
-    height: 280px;
-    border: 1px solid black;
-    border-radius: 5px;
-    object-fit: cover;
-}
-
 #quit-button {
     height: 40px;
     width: 40px;
@@ -164,4 +156,47 @@ div .site-button:focus,
 div .menu-list:focus {
     outline: 0;
     box-shadow: none;
+}
+
+.site-photos {
+    width: 500px;
+    height: 280px;
+    border: 1px solid black;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 576px) {
+    .site-photos {
+        width: 200px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .site-photos {
+        width: 200px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .site-photos {
+        width: 300px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .site-photos {
+        width: 400px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .site-photos {
+        width: 500px;
+        object-fit: cover;
+    }
 }

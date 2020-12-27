@@ -1,10 +1,5 @@
 var filtredMarkers = [];
 
-function handleNoResults() {
-    $('#nb-markers').empty().append("0");
-    map.setZoom(11);
-}
-
 function refreshMap() {
     var a = 0;
     for (i = 0; i < markers.length; i++) {
@@ -32,6 +27,7 @@ function initMarkers() {
     refreshMap();
     map.setCenter(mapCenter);
     map.setZoom(10);
+    map.setZoom(map.getZoom() - 0.1);
     showFiltredM();
 }
 

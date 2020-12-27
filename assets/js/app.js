@@ -8,7 +8,7 @@ const map = new google.maps.Map(document.getElementById('map'), {
 });
 
 //TABLEAU DES MARKERS
-var markers = new Array(
+var markers = [
     //Champs-Élysées
     new google.maps.Marker({
         position: { lat: 48.869745, lng: 2.307946 },
@@ -295,7 +295,7 @@ var markers = new Array(
         photo: "assets/img/piscine_st_denis.jpg",
         descr: "La piscine olympique de Saint-Denis est un projet d'équipement de la candidature française pour les Jeux olympiques d'été de 2024 qui sera implanté à Saint-Denis.",
     }),
-)
+]
 
 //TABLEAU SPORTS
 const sports = [
@@ -385,7 +385,7 @@ for (let k = 0; k < markers.length; k++) {
         $("#fiche-site").removeClass("hidden");
         $("#site-title").empty().append(markers[k].title);
         $("#descr-site").empty().append(markers[k].descr);
-        $("#photo1").attr("src", markers[k].photo)
+        $("#photo1").attr("src", markers[k].photo);
         $("#epr-site").empty();
         for (j = 0; j < sports.length; j++) {
             if (markers[k].sport.a == j || markers[k].sport.b == j || markers[k].sport.c == j || markers[k].sport.d == j) {
@@ -403,6 +403,7 @@ for (let k = 0; k < markers.length; k++) {
     map.setZoom(10);
 }
 
+//NAV FENETRE LIEU
 let currentM = 0;
 $(function() {
     $('#prev-button').click(function() {
@@ -429,6 +430,7 @@ $(function() {
     });
 });
 
+//REMPLIR LES FILTRES
 for (i = 0; i < villes.length; i++) {
     $("#city-select").append('<a class="dropdown-item villes-item" type="button" onclick="sortVilles(' + i + ')">' + villes[i] + '</a>');
 }
